@@ -1,4 +1,4 @@
-// Identificador de licencia SPDX:
+// SPDX-License-Identifier: MIT
 pragma MIT solidity ^0.8.0;
 
 contrato VulnerablePiggyBank {
