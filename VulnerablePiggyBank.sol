@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
-pragma MIT solidity ^0.8.0;
 
-contrato VulnerablePiggyBank {
-    dirección pública propietario;
-    constructor() { propietario = msg.sender }
-    función deposit() público pagar {}
-    función retirar() público { pagar(msg.sender).transfer(dirección(this).balance); }
-    función ataque() público { }
+pragma solidity ^0.8.0;
+contract VulnerablePiggyBank {
+    address public owner;
+    constructor() { owner = msg.sender; }
+    function deposit() public payable {}
+    function withdraw() public { payable(msg.sender).transfer(address(this).balance); }
+    function attack() public { }
 }
